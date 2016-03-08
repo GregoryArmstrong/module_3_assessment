@@ -56,4 +56,11 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
 
     expect(response.status).to eq(204)
   end
+
+  scenario "POST Api::V1::Items#create" do
+    post :create, name: "test_name", description: "test_description", image_url: "test_url.com"
+
+    
+
+  end
 end

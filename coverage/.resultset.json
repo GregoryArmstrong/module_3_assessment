@@ -206,6 +206,20 @@
         null,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/api/api_controller.rb": [
@@ -289,6 +303,6 @@
         null
       ]
     },
-    "timestamp": 1457455859
+    "timestamp": 1457456601
   }
 }

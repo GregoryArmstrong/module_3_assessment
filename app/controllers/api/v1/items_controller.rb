@@ -18,5 +18,15 @@ class Api::V1::ItemsController < Api::V1::ApiController
 
   def destroy
     @item = Item.find(params[:id])
+
+    if @item.destroy
+      redirect_to root_url, status: 204
+    else
+      redirect_to root_url, status: 404
+    end
+  end
+
+  def create
+
   end
 end
