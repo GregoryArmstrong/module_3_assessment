@@ -19,15 +19,16 @@ class BestBuyService
 
   private
 
-  def parse(connection)
-    JSON.parse(connection)
+  def parse(response)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def connection_settings(path)
     connection.get do |req|
       req.url (path)
-      req.headers['format'] = 'json'
-      req.params['apiKey'] = ENV['best_buy_key']
+      req.params['format'] = 'json'
+      req.params['apiKey'] = ENV['BEST_BUY_KEY']
+      req.params['show'] = 'customerReviewAverage,sku,name,salePrice,'
     end
   end
 

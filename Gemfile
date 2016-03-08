@@ -15,6 +15,7 @@ gem "less-rails-bootstrap"
 gem "faraday"
 gem "responders"
 gem "puma"
+gem 'figaro'
 
 group :development do
   gem "spring"

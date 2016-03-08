@@ -56,6 +56,8 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    figaro (1.1.1)
+      thor (~> 0.14)
     haml (4.0.7)
       tilt
     haml-rails (0.9.0)
@@ -206,6 +208,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   faker
   faraday
+  figaro
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

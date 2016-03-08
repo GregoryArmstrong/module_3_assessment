@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-08T10:44:56-07:00">2016-03-08T10:44:56-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-08T11:01:44-07:00">2016-03-08T11:01:44-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.61%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.87
+         0.88
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>28</b> files in total.
-    <b>127</b> relevant lines. 
-    <span class="green"><b>110</b> lines covered</span> and
-    <span class="red"><b>17</b> lines missed </span>
+    <b>126</b> relevant lines. 
+    <span class="green"><b>111</b> lines covered</span> and
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#e3542aa83d771a6370629b22eb1a5dc66d0d6a93" class="src_link" title="app/controllers/items_controller.rb">app/controllers/items_controller.rb</a></td>
-        <td class="red strong">77.78 %</td>
+        <td class="yellow strong">88.89 %</td>
         <td>15</td>
         <td>9</td>
-        <td>7</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td>8</td>
+        <td>1</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -153,7 +153,7 @@
       <tr>
         <td class="strong"><a href="#9d4ee2442f22fb6f822e4e33801c68d2677ec391" class="src_link" title="app/services/best_buy_service.rb">app/services/best_buy_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>34</td>
+        <td>35</td>
         <td>19</td>
         <td>19</td>
         <td>0</td>
@@ -312,11 +312,11 @@
       
       <tr>
         <td class="strong"><a href="#9c54e55f649a84ca450e44a0f80c49f5895871df" class="src_link" title="spec/features/user_can_search_products_spec.rb">spec/features/user_can_search_products_spec.rb</a></td>
-        <td class="red strong">41.18 %</td>
-        <td>24</td>
-        <td>17</td>
+        <td class="red strong">43.75 %</td>
+        <td>23</td>
+        <td>16</td>
         <td>7</td>
-        <td>10</td>
+        <td>9</td>
         <td>0.4</td>
       </tr>
       
@@ -721,11 +721,11 @@
         <div class="source_table" id="e3542aa83d771a6370629b22eb1a5dc66d0d6a93">
   <div class="header">
     <h3>app/controllers/items_controller.rb</h3>
-    <h4><span class="red">77.78 %</span> covered</h4>
+    <h4><span class="yellow">88.89 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -804,8 +804,8 @@
           <code class="ruby">    found_items = bbs.search(params[:search][:search_criteria])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">    binding.pry</code>
         </li>
@@ -1161,13 +1161,13 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  def parse(connection)</code>
+          <code class="ruby">  def parse(response)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">    JSON.parse(connection)</code>
+          <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
@@ -1203,34 +1203,40 @@
         <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
-          <code class="ruby">      req.headers[&#39;format&#39;] = &#39;json&#39;</code>
+          <code class="ruby">      req.params[&#39;format&#39;] = &#39;json&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">      req.params[&#39;apiKey&#39;] = ENV[&#39;best_buy_key&#39;]</code>
+          <code class="ruby">      req.params[&#39;apiKey&#39;] = ENV[&#39;BEST_BUY_KEY&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      req.params[&#39;show&#39;] = &#39;customerReviewAverage,sku,name,salePrice,&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
@@ -2509,11 +2515,11 @@
         <div class="source_table" id="9c54e55f649a84ca450e44a0f80c49f5895871df">
   <div class="header">
     <h3>spec/features/user_can_search_products_spec.rb</h3>
-    <h4><span class="red">41.18 %</span> covered</h4>
+    <h4><span class="red">43.75 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
+      <b>16</b> relevant lines. 
       <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
   </div>
   
@@ -2583,82 +2589,76 @@
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">      binding.pry</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
-          
           <code class="ruby">      items = JSON.parse(response.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">      expect(current_path).to eq search_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;SKU&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;Name&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;Customer Average Review&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
+        <li class="missed" data-hits="0" data-linenumber="17">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;Description&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;Sale Price&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="19">
           
           
           <code class="ruby">      expect(page).to have_content(&quot;image&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
           <code class="ruby">      expect(items).to have(15).things</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>
