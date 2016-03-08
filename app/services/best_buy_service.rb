@@ -14,6 +14,7 @@ class BestBuyService
   end
 
   def search(search_criteria)
+    search_criteria = search_criteria.split.join("&search=")
     parse(connection_settings("products(longDescription=#{search_criteria}*)"))
   end
 
