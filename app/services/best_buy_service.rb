@@ -14,7 +14,7 @@ class BestBuyService
   end
 
   def search(search_criteria)
-    parse(connection_settings("products(search=#{search_criteria})"))
+    parse(connection_settings("products(longDescription=#{search_criteria}*)"))
   end
 
   private
@@ -28,7 +28,7 @@ class BestBuyService
       req.url (path)
       req.params['format'] = 'json'
       req.params['apiKey'] = ENV['BEST_BUY_KEY']
-      req.params['show'] = 'customerReviewAverage,sku,name,salePrice,'
+      req.params['show'] = 'customerReviewAverage,sku,name,salePrice,shortDescription'
     end
   end
 
