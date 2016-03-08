@@ -15,7 +15,10 @@ class BestBuyService
 
   def search(search_criteria)
     search_criteria = search_criteria.split.join("&search=")
-    parse(connection_settings("products(longDescription=#{search_criteria}*)"))
+    items = parse(connection_settings("products(longDescription=#{search_criteria}*)"))[:products]
+    items.map do |item|
+      build_object(item)
+    end
   end
 
   private
@@ -31,6 +34,10 @@ class BestBuyService
       req.params['apiKey'] = ENV['BEST_BUY_KEY']
       req.params['show'] = 'customerReviewAverage,sku,name,salePrice,shortDescription'
     end
+  end
+
+  def build_object(details)
+    OpenStruct.new(details)
   end
 
 end

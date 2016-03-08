@@ -14,6 +14,6 @@ class ItemsController < ApplicationController
     bbs = BestBuyService.new
     @found_items = bbs.search(params[:search][:search_criteria])
 
-    respond_with @found_items[:products], location: -> { search_path }
+    respond_with @found_items, location: -> { search_path }
   end
 end

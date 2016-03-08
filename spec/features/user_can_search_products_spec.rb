@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.feature "UserCanSearchProducts", type: :feature do
   scenario "User can use search form on root_path for products" do
-    skip
     VCR.use_cassette("items#search") do
       visit root_path
 
