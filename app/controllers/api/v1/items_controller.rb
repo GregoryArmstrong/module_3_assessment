@@ -27,6 +27,15 @@ class Api::V1::ItemsController < Api::V1::ApiController
   end
 
   def create
+    @item = Item.create(name: params[:name],
+                        description: params[:description],
+                        image_url: params[:image_url]
+                        )
 
+    if @item
+      respond_with(@item, status: 201)
+    else
+      redirect_to root_url, status: 404
+    end
   end
 end

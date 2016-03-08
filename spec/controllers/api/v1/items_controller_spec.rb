@@ -58,9 +58,18 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
   end
 
   scenario "POST Api::V1::Items#create" do
+    skip
     post :create, name: "test_name", description: "test_description", image_url: "test_url.com"
 
-    
+    expect(response.status).to eq(201)
+    expect(response.content_type).to eq "application/json"
 
+    item = JSON.parse(response.body)
+
+    expect(item).to have_content("test_name")
+    expect(item).to have_content("test_description")
+    expect(item).to have_content("test_url.com")
+    expect(item).to_not have_content("updated_at")
+    expect(item).to_not have_content("created_at")
   end
 end
