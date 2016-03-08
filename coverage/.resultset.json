@@ -297,6 +297,7 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         null
@@ -326,6 +327,9 @@
       ],
       "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/items_controller.rb": [
         1,
+        null,
+        1,
+        null,
         1,
         2,
         null,
@@ -337,6 +341,7 @@
         1,
         1,
         1,
+        null,
         1,
         null,
         null
@@ -379,6 +384,6 @@
         null
       ]
     },
-    "timestamp": 1457461067
+    "timestamp": 1457462023
   }
 }

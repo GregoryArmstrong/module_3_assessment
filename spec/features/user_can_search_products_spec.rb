@@ -17,6 +17,7 @@ RSpec.feature "UserCanSearchProducts", type: :feature do
       expect(page).to have_content("Description")
       expect(page).to have_content("Sale Price")
       expect(page).to have_content("image")
+      expect(page).to have_content("sennheiser")
       expect(items).to have(15).things
     end
   end
