@@ -160,6 +160,16 @@
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/helpers/api/v1/items_helper.rb": [
+        1,
         null
       ],
       "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/helpers/application_helper.rb": [
@@ -178,6 +188,78 @@
         1,
         null
       ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/api/v1/items_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/application_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/lib/application_responder.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/spec/features/display_items_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/spec/helpers/api/v1/items_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/models/item.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/items_controller.rb": [
         1,
         1,
@@ -188,21 +270,8 @@
         0,
         null,
         null
-      ],
-      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/gregoryarmstrong/turing/3module/Projects/module_3_assessment/app/models/item.rb": [
-        1,
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1457450130
+    "timestamp": 1457453882
   }
 }
