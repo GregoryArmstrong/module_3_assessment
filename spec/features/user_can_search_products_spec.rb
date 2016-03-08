@@ -2,13 +2,22 @@ require 'rails_helper'
 
 RSpec.feature "UserCanSearchProducts", type: :feature do
   scenario "User can use search form on root_path for products" do
-    visit root_path
+    VCR.use_cassette("items#search") do
+      visit root_path
 
-    fill_in "Search Criteria", with: "sennheiser"
-    click_on("Search")
+      fill_in "Search Criteria", with: "sennheiser"
+      click_on("Search")
 
-    expect(current_path).to eq search_path
-    expect(page).to have_content("")
+      items = JSON.parse(response.body)
 
+      expect(current_path).to eq search_path
+      expect(page).to have_content("SKU")
+      expect(page).to have_content("Name")
+      expect(page).to have_content("Customer Average Review")
+      expect(page).to have_content("Description")
+      expect(page).to have_content("Sale Price")
+      expect(page).to have_content("image")
+      expect(items).to have(15).things
+    end
   end
 end
