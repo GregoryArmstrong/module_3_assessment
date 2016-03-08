@@ -12,13 +12,20 @@ gem "faker"
 gem "haml-rails"
 gem "therubyracer"
 gem "less-rails-bootstrap"
-gem "minitest-rails"
+gem "faraday"
+gem "responders"
+gem "puma"
 
 group :development do
   gem "spring"
 end
 
 group :development, :test do
-  gem "minitest-rails-capybara"
   gem "pry", :require => "pry"
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'vcr'
+  gem 'simplecov'
+  gem 'webmock'
+  gem 'launchy'
 end
